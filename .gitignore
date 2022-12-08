@@ -1,0 +1,12 @@
+node_modules
+dist/**
+coverage
+data
+.DS_Store
+.scannerwork*
+package.json-e
+.env
+.env.sample
+.clinic
+src/database/master-data/*
+!src/database/master-data/.gitkeep

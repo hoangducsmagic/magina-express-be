@@ -1,0 +1,195 @@
+{
+  "executionRoleArn": "arn:aws:iam::558539696287:role/ECS-TaskExecution-Role-be-stack",
+  "containerDefinitions": [
+    {
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "jooined-qa",
+          "awslogs-region": "eu-central-1",
+          "awslogs-stream-prefix": "jooined-qa"
+        }
+      },
+      "portMappings": [
+        {
+          "hostPort": 8000,
+          "protocol": "tcp",
+          "containerPort": 8000
+        }
+      ],
+      "secrets": [
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:MODE::",
+          "name": "MODE"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:SERVER_HOST::",
+          "name": "SERVER_HOST"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:SERVER_PORT::",
+          "name": "SERVER_PORT"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:MONGO_URI::",
+          "name": "MONGO_URI"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:FRONTEND_URL::",
+          "name": "FRONTEND_URL"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:SMTP_HOST::",
+          "name": "SMTP_HOST"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:SMTP_PORT::",
+          "name": "SMTP_PORT"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:SMTP_USER::",
+          "name": "SMTP_USER"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:SMTP_PASSWORD::",
+          "name": "SMTP_PASSWORD"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:EMAIL_FROM::",
+          "name": "EMAIL_FROM"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:JWT_SECRET_KEY::",
+          "name": "JWT_SECRET_KEY"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:USER_POOL_ID::",
+          "name": "USER_POOL_ID"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:CLIENT_ID::",
+          "name": "CLIENT_ID"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:API_VERSION::",
+          "name": "API_VERSION"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:UPLOAD_COMPANY_LOGO_AWS_ACCESS_KEY_ID::",
+          "name": "UPLOAD_COMPANY_LOGO_AWS_ACCESS_KEY_ID"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:UPLOAD_COMPANY_LOGO_AWS_SECRET_ACCESS_KEY::",
+          "name": "UPLOAD_COMPANY_LOGO_AWS_SECRET_ACCESS_KEY"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:UPLOAD_COMPANY_LOGO_AWS_REGION::",
+          "name": "UPLOAD_COMPANY_LOGO_AWS_REGION"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:UPLOAD_COMPANY_LOGO_AWS_BUCKET::",
+          "name": "UPLOAD_COMPANY_LOGO_AWS_BUCKET"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:UPLOAD_COMPANY_LOGO_AWS_FOLDER::",
+          "name": "UPLOAD_COMPANY_LOGO_AWS_FOLDER"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:UPLOAD_DOCUMENT_AWS_ACCESS_KEY_ID::",
+          "name": "UPLOAD_DOCUMENT_AWS_ACCESS_KEY_ID"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:UPLOAD_DOCUMENT_AWS_SECRET_ACCESS_KEY::",
+          "name": "UPLOAD_DOCUMENT_AWS_SECRET_ACCESS_KEY"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:UPLOAD_DOCUMENT_AWS_REGION::",
+          "name": "UPLOAD_DOCUMENT_AWS_REGION"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:UPLOAD_DOCUMENT_AWS_BUCKET::",
+          "name": "UPLOAD_DOCUMENT_AWS_BUCKET"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:UPLOAD_DOCUMENT_AWS_FOLDER::",
+          "name": "UPLOAD_DOCUMENT_AWS_FOLDER"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:SUPER_ADMIN_INIT_EMAIL::",
+          "name": "SUPER_ADMIN_INIT_EMAIL"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:SUPER_ADMIN_INIT_PASSWORD::",
+          "name": "SUPER_ADMIN_INIT_PASSWORD"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:SUPER_ADMIN_INIT_NAME::",
+          "name": "SUPER_ADMIN_INIT_NAME"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:TSNM_DB_TYPE::",
+          "name": "TSNM_DB_TYPE"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:TSNM_DIR::",
+          "name": "TSNM_DIR"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:TSNM_TABLE_NAME::",
+          "name": "TSNM_TABLE_NAME"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:TSNM_URL::",
+          "name": "TSNM_URL"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:AWS_SQS_REGION::",
+          "name": "AWS_SQS_REGION"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:AWS_SQS_ACCESS_KEY_ID::",
+          "name": "AWS_SQS_ACCESS_KEY_ID"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:AWS_SQS_SECRET_ACCESS_KEY::",
+          "name": "AWS_SQS_SECRET_ACCESS_KEY"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:AWS_SQS_URL::",
+          "name": "AWS_SQS_URL"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:SKEELED_BASE_URL::",
+          "name": "SKEELED_BASE_URL"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:SKEELED_MEDIA_TYPE_HEADER::",
+          "name": "SKEELED_MEDIA_TYPE_HEADER"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:SENDBIRD_APP_ID::",
+          "name": "SENDBIRD_APP_ID"
+        },
+        {
+          "valueFrom": "arn:aws:secretsmanager:eu-central-1:558539696287:secret:backend_settings-EatGbJ:SENDBIRD_API_TOKEN::",
+          "name": "SENDBIRD_API_TOKEN"
+        }
+      ],
+      "cpu": 512,
+      "memory": 2048,
+      "mountPoints": [],
+      "volumesFrom": [],
+      "essential": true,
+      "image": "558539696287.dkr.ecr.eu-central-1.amazonaws.com/jooined-qa:latest",
+      "name": "jooined-qa"
+    }
+  ],
+  "placementConstraints": [],
+  "memory": "2048",
+  "taskRoleArn": "arn:aws:iam::558539696287:role/ECS-Task-Role-be-stack",
+  "family": "jooined-qa",
+  "requiresCompatibilities": ["FARGATE"],
+  "networkMode": "awsvpc",
+  "cpu": "512",
+  "volumes": []
+}
